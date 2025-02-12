@@ -26,12 +26,12 @@ const Scene = ({ cameraRef }) => {
   // Particles initialization
   const particles = useMemo(() => {
     const particleArray = [];
-    for (let i = 0; i < 400; i++) {
-      const pscale = 0.1 + Math.random() * 0.25;
+    for (let i = 0; i < 150; i++) {
+      const pscale = 0.15 + Math.random() * 0.30;
       const particle = new THREE.Mesh(
-        new THREE.SphereGeometry(pscale, 7, 8),
+        new THREE.SphereGeometry(pscale, 12, 6),
         new THREE.MeshBasicMaterial({
-          color: 0xaaffaa,
+          color: 0x6fa8dc,
           side: THREE.DoubleSide,
           transparent: true,
           opacity: 0.1,
@@ -43,7 +43,7 @@ const Scene = ({ cameraRef }) => {
         Math.random() * 6 - 3
       );
       particle.scale.set(pscale, pscale, pscale);
-      particle.speedValue = Math.random() * 0.3 + 0.5;
+      particle.speedValue = Math.random() * 0.2 + 0.8;
       particle.rotation.set(
         Math.random() * Math.PI,
         Math.random() * Math.PI,
@@ -93,7 +93,7 @@ const Scene = ({ cameraRef }) => {
 
     // Keep the camera looking at the origin
     if (cameraRef.current) {
-      cameraRef.current.lookAt(0, 0, 0);
+      cameraRef.current.lookAt(0, -0.35, 0);
     }
   });
 
