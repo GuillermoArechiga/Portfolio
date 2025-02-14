@@ -22,7 +22,7 @@ Follow these steps to run this project locally:
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/your-repository-name.git
-cd your-repository-name
+git clone https://github.com/GuillermoArechiga/Portfolio.git
+cd Portfolio
 npm install
 npm run dev
